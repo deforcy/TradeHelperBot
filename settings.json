@@ -1,10 +1,10 @@
 {
 	"bot_id": "1268936583285837987",
-	"access_role": "677527527522041857",
-	"mention_role": "1304173903563853845",
-	"bot_token": "MTI2ODkzNjU4MzI4NTgzNzk4Nw.GBRmta.J_SW6f8mMyFPPCKE0QVsdXIvcYYtQ8n6sNTfzA",
+	"access_role": "",
+	"mention_role": "",
+	"bot_token": "",
 	"allowed_channels_id": [
-		"677865611413684224",
+		"",
 		"",
 		"",
 		""
