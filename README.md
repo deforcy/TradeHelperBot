@@ -1,10 +1,25 @@
 # This bot, will make your **trading** in discord **better** 🪙 📈
 
+# HOW IT LOOKS:
+### without image
+![message_deal](https://github.com/user-attachments/assets/11c9b66d-da56-4f06-88d2-b5b9b7f22dca) 
+### with image 
+![message_deal_withembed](https://github.com/user-attachments/assets/203fc7c5-9a9e-4aef-97b9-4d42f96a854d)
+
 ## INFO ⓘ:
 
 ### Bot consists out of **2** files: `TradingHelperBot.py` and `settings.json`
 ### It is very simple to use, just do everything in `settings.json` and you're done
 ### `settings.json` is a configuration file that bot uses
+### If you put an image with message (or any file btw), bot will also use it
+
+## USAGE:
+### This, is how you should type command:
+![message](https://github.com/user-attachments/assets/8a9a4b78-fe05-4e11-9603-c05369bb2f42)
+
+`[tag bot] [Coin name] [Entry point price] [Take profit price] [Stop loss price]`
+## - Coin name should be UPPER!
+## - `-` will change to space!
 
 ## REQUIREMENTS 📝
 ### - They should be **in one folder**
