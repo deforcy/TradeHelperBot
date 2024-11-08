@@ -8,7 +8,7 @@
 
 ## INFO ⓘ:
 
-### Bot consists out of **2** files: `TradingHelperBot.py` and `settings.json`
+### Bot consists out of **2** files: `TradeHelperBot.py` and `settings.json`
 ### It is very simple to use, just do everything in `settings.json` and you're done
 ### `settings.json` is a configuration file that bot uses
 ### If you put an image with message (or any file btw), bot will also use it
