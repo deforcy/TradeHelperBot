@@ -1,0 +1,92 @@
+{
+  "en": {
+    "buttons": {
+      "tp1": "Close by TP",
+      "tp2": "Deal was closed by TP (Take Profit)",
+      "sl1": "Close by SL",
+      "sl2": "Deal was closed by SL (Stop Loss)",
+      "er1": "Close earlier",
+      "er2": "Deal was closed earlier"
+    },
+    "labels": {
+      "ep": "EP (Entry Point)",
+      "tp": "TP (Take Profit)",
+      "sl": "SL (Stop Loss)"
+    }
+  },
+  "it": {
+    "buttons": {
+      "tp1": "Chiudi per TP",
+      "tp2": "L'operazione è stata chiusa per TP (Take Profit)",
+      "sl1": "Chiudi per SL",
+      "sl2": "L'operazione è stata chiusa per SL (Stop Loss)",
+      "er1": "Chiudi prima",
+      "er2": "L'operazione è stata chiusa prima"
+    },
+    "labels": {
+      "ep": "EP (Punto di Entrata)",
+      "tp": "TP (Take Profit)",
+      "sl": "SL (Stop Loss)"
+    }
+  },
+  "es": {
+      "buttons": {
+        "tp1": "Cerrar por TP",
+        "tp2": "La operación se cerró por TP (Take Profit)",
+        "sl1": "Cerrar por SL",
+        "sl2": "La operación se cerró por SL (Stop Loss)",
+        "er1": "Cerrar antes",
+        "er2": "La operación se cerró antes"
+      },
+      "labels": {
+        "ep": "EP (Punto de Entrada)",
+        "tp": "TP (Take Profit)",
+        "sl": "SL (Stop Loss)"
+      }
+  },
+  "fr": {
+    "buttons": {
+      "tp1": "Fermer par TP",
+      "tp2": "L'opération a été fermée par TP (Take Profit)",
+      "sl1": "Fermer par SL",
+      "sl2": "L'opération a été fermée par SL (Stop Loss)",
+      "er1": "Fermer plus tôt",
+      "er2": "L'opération a été fermée plus tôt"
+    },
+    "labels": {
+      "ep": "EP (Point d'Entrée)",
+      "tp": "TP (Take Profit)",
+      "sl": "SL (Stop Loss)"
+    }
+  },
+  "de": {
+    "buttons": {
+      "tp1": "Schließen durch TP",
+      "tp2": "Geschäft wurde durch TP (Take Profit) geschlossen",
+      "sl1": "Schließen durch SL",
+      "sl2": "Geschäft wurde durch SL (Stop Loss) geschlossen",
+      "er1": "Früher schließen",
+      "er2": "Geschäft wurde früher geschlossen"
+    },
+    "labels": {
+      "ep": "EP (Einstiegspunkt)",
+      "tp": "TP (Take Profit)",
+      "sl": "SL (Stop Loss)"
+    }
+  },
+  "ru": {
+    "buttons": {
+      "tp1": "Закрыть по ТП",
+      "tp2": "Сделка была закрыта по ТП (Тейк Профит)",
+      "sl1": "Закрыть по СЛ",
+      "sl2": "Сделка была закрыта по СЛ (Стоп Лосс)",
+      "er1": "Закрыть раньше",
+      "er2": "Сделка была закрыта раньше"
+    },
+    "labels": {
+      "ep": "ТВ (Точка Входа)",
+      "tp": "ТП (Тейк Профит)",
+      "sl": "СЛ (Стоп Лосс)"
+    }
+  }
+}

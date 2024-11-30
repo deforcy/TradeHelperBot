@@ -1,5 +1,5 @@
 {
-	"bot_id": "1268936583285837987",
+	"bot_id": "",
 	"access_role": "",
 	"mention_role": "",
 	"bot_token": "",
@@ -17,21 +17,5 @@
 	},
 	"status_message": "",
 	"status": 1,
-	"localization":{
-		"en":{
-			"buttons":{
-				"tp1":"Close by TP",
-				"tp2":"Deal was closed by TP (Take Profit)",
-				"sl1":"Close by SL",
-				"sl2":"Deal was closed by SL (Stop Loss)",
-				"er1":"Close earlier",
-				"er2":"Deal was closed earlier"
-			},
-			"labels":{
-				"ep":"EP (Entry Point)",
-				"tp":"TP (Take Profit)",
-				"sl":"SL (Stop Loss)"
-			}
-		}
-	}
+	"localization": "en"
 }
