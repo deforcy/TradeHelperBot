@@ -16,6 +16,11 @@ try:
     import discord
 except ImportError as e:
     exit(str(e)+' No discord.py installed! Use "pip install discord.py" or "python3 -m pip install discord.py"')
+
+try:
+    import asyncio
+except ImportError as e:
+    exit(str(e)+' No asyncio installed! Use "pip install asyncio" or "python3 -m pip install asyncio"')
 #=========================================================================================================
 
 import tkinter
@@ -159,7 +164,7 @@ class ProgramWindowClass:
         global files_to_check_1
         global files_to_check_2
         failed = False
-        # time.sleep(1)
+        time.sleep(1)
         progress_per_file = 100/(len(files_to_check_1)+len(files_to_check_2))
         for file in files_to_check_1:
             status,message,solution = confCheck(file,1)
@@ -447,7 +452,7 @@ def check2(f):
     else:
         return True, True
 def confCheck(filename,fileType):
-    # time.sleep(random.random())
+    time.sleep(random.random())
     if not check(filename):
         return False,f"{filename} wasn't found.","Consider adding file to script folder/renaming file to '{filename}'."
     if fileType == 2:
