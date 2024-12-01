@@ -8,22 +8,27 @@
 
 ## INFO ⓘ:
 
-### Bot consists out of **2** files: `TradeHelperBot.py` and `settings.json`
-### It is very simple to use, just do everything in `settings.json` and you're done
-### `settings.json` is a configuration file that bot uses
-### If you put an image with message (or any file btw), bot will also use it
+### Bot consists out of **5** files. You need 3 of them: `TradeHelperBot.py`, `settings.json` and `requierements.txt`
+### All other files (`localization.json`, `logo.png`) just put in the same folder where script is
+
+
 
 ## USAGE:
 ### This, is how you should type command:
 ![message](https://github.com/user-attachments/assets/8a9a4b78-fe05-4e11-9603-c05369bb2f42)
 
 `[tag bot] [Coin name] [Entry point price] [Take profit price] [Stop loss price]`
-## - Coin name should be UPPER!
-## - `-` will change to space!
+
+**If you put an image with message (or any file), bot will also use it**
+
+Coin name should be **UPPER!**
+
+`-` will **change** to space!
 
 ## REQUIREMENTS 📝
-### - They should be **in one folder**
-### - You should install **discord.py** library
+They should be **in one folder**
+
+You should install **all libraries** from `requierements.txt` file
 
 ## CONFIGURATION ⚙️
 ### status
@@ -41,11 +46,12 @@
 - `"bot_token"` is a secret bot token
 - `"allowed_channels_id"` is a list of channel id's, where bot is listening for messages and types (only in this channels)
 - `"colors"` is a list of colors that bot use to better describe a situation
-- `"localization"` used only in "en" version. If you want to be a translator, write me somewhere (better at discord @deforce_)
+- `"localization"` available languages are `en`, `it`, `es`, `fr`, `de` and `ru`. If you want to be a translator, write me somewhere (better at discord @deforce_)
 
 ## PLANS 🎯
-### Better localization
-### Making threads and voice channels
-### Online searching for coins in order to automaticaly closing deals
+### ✅ Better localization
+### ✅ Custom UI
+### 🛠️ Making threads and voice channels
+### 🛠️ Online searching for coins in order to automaticaly closing deals
 
 # Have fun!
