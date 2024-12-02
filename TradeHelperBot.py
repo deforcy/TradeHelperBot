@@ -33,6 +33,7 @@ from json import load
 import time
 import threading
 import random
+import platform
 
 settingsFile = 'settings.json'
 localizationFile = 'localization.json'
@@ -139,6 +140,9 @@ class ProgramWindowClass:
             elif message_type == 4 and not added_time:
                 added_time = True
                 self.ConsoleTimings.insert(item_count,"INFO:")
+            elif message_type == 5 and not added_time:
+                added_time = True
+                self.ConsoleTimings.insert(item_count,"END:")
             else:
                 self.ConsoleTimings.insert(item_count,"")
 
@@ -158,6 +162,17 @@ class ProgramWindowClass:
             elif message_type == 4:
                 self.ConsoleTimings.itemconfig(item_count,{'fg':'aqua'})
                 self.ListBox.itemconfig(item_count,{'fg':'aqua'})
+            elif message_type == 5:
+                self.ConsoleTimings.itemconfig(item_count,{'fg':'black','bg':'white'})
+                self.ListBox.itemconfig(item_count,{'fg':'black','bg':'white'})
+
+    def exit_program(self,custom_message = None):
+        exit_message = 'Exiting in 10 seconds...'
+        if custom_message:
+            exit_message = str(custom_message)
+        self.add_message_to_list(exit_message,5,True)
+        time.sleep(10)
+        root.destroy()
 
     def start_progress(self,w):
         #progress.start()
@@ -357,7 +372,15 @@ class ProgramWindowClass:
         intents = discord.Intents.default()
         intents.message_content = True
 
-        client = discord.Client(intents=intents)
+        client = None
+        try:
+            client = discord.Client(intents=intents)
+        except Exception as e:
+            self.add_message_to_list(str(e),2,True)
+            if platform.python_version() == '3.12.4':
+                self.add_message_to_list('Possible solution: use python3.10 instead',4,False)
+            self.exit_program()
+
         bot_id = settings["bot_id"]
         access_role = settings["access_role"]
         mention_role = settings["mention_role"]
@@ -434,7 +457,9 @@ class ProgramWindowClass:
             client.run(settings['bot_token'])
         except Exception as e:
             self.add_message_to_list(str(e),2,True)
-        self.add_message_to_list('Bot stopped',1,True)
+
+        self.add_message_to_list('Bot stopped',0,True)
+        self.exit_program()
     #============================================================================================================
 
 def check(f):
