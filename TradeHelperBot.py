@@ -108,8 +108,8 @@ class ProgramWindowClass:
         self.ListBox = Listbox(self.root, selectmode='extended', height=3, width=40, bg='black', fg='white',highlightbackground='gray13',font="Consolas 8")
         self.ScrollBar = ttk.Scrollbar(self.root,orient="horizontal",style="arrowless.Horizontal.TScrollbar")#,width=14,bg='black')
 
-        self.VersionLabel = Label(self.root,text='v1.1',font='Arial 6',bg='black',fg='gray29')
-        self.VersionLabel.place(x=370,y=215)
+        self.VersionLabel = Label(self.root,text='v1.1 (fixed)',font='Arial 6',bg='black',fg='gray29')
+        self.VersionLabel.place(x=350,y=215)
 
         self.ListBox.configure(xscrollcommand=self.ScrollBar.set)
         self.ScrollBar.configure(command=self.ListBox.xview)
@@ -246,7 +246,7 @@ class ProgramWindowClass:
         self.LogoImage.place(x=0,y=0)
         self.StatusLabel.place(x=165,y=13)
         self.StatusLabel.configure(text='Trade Helper Bot')
-        self.VersionLabel.place(x=470,y=580)
+        self.VersionLabel.place(x=450,y=580)
 
         self.ProgressBar.grid_forget()
         self.UnderLabel2.grid_forget()
