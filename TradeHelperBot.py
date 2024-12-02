@@ -1,3 +1,4 @@
+from pytweening import easeInOutSine
 
 #EVERYTHING IS UNDER APACHE 2.0
 
@@ -21,6 +22,13 @@ try:
     import asyncio
 except ImportError as e:
     exit(str(e)+' No asyncio installed! Use "pip install asyncio" or "python3 -m pip install asyncio"')
+
+
+isTweenInstalled = True
+try:
+    import tween
+except ImportError as e:
+    isTweenInstalled = False
 #=========================================================================================================
 
 import tkinter
@@ -119,7 +127,7 @@ class ProgramWindowClass:
         img = ImageTk.PhotoImage(Image.open(imgname))
         self.LogoImage.configure(image=img)
 
-    def add_message_to_list(self,message,message_type,display_message_time):
+    def add_message_to_list(self,message='',message_type=0,display_message_time=False):
         global item_count
         global message_count
         message_count += 1
@@ -174,6 +182,13 @@ class ProgramWindowClass:
         time.sleep(10)
         root.destroy()
 
+    def underlabel_dots_anim(self):
+        dots = 0
+        for i in range(1,random.randint(10,20)):
+            dots = (dots+1)%3
+            self.UnderLabel2['text'] = 'starting bot'+'.'*(dots+1)
+            time.sleep(.25)
+
     def start_progress(self,w):
         #progress.start()
         global files_to_check_1
@@ -217,12 +232,9 @@ class ProgramWindowClass:
             self.StatusLabel['text'] = 'Everything is good!'
             self.ProgressBar.configure(mode="indeterminate")
             self.ProgressBar.start()
-            dots = 0
-            for i in range(1,random.randint(6,12)):
-                dots = (dots+1)%3
-                self.UnderLabel2['text'] = 'starting bot'+'.'*(dots+1)
-                time.sleep(.25)
 
+            dotsanim = threading.Thread(target=self.underlabel_dots_anim,daemon=True)
+            dotsanim.start()
             self.control_panel_process()
 
     def onMouseWheel(self,event):
@@ -241,6 +253,30 @@ class ProgramWindowClass:
         return "break"
 
     def control_panel_process(self):
+        window_size = [400,235]
+        logo_pos = [180,10]
+
+        self.StatusLabel.grid_forget()
+        self.ProgressBar.grid_forget()
+        time.sleep(1)
+
+        if isTweenInstalled:
+            tween1 = tween.to(window_size,0,500,.25,"easeInOutSine")
+            tween2 = tween.to(window_size,1,600,.25,"easeInOutSine")
+            logotween1 = tween.to(logo_pos,0,0,.5,"easeOutSine")
+            logotween2 = tween.to(logo_pos,1,0,.5,"easeOutSine")
+            for var in range(0,50):
+                tween.update(.01)
+                self.root.geometry(str(int(window_size[0]))+"x"+str(int(window_size[1])))
+                self.LogoImage.place(x=logo_pos[0],y=logo_pos[1])
+                time.sleep(.01)
+
+            # for var in range(0,50):
+            #     tween.update(.01)
+            #     time.sleep(.01)
+            time.sleep(.25)
+
+
         self.root.geometry("500x600")
         self.root.title("Control panel")
         self.LogoImage.place(x=0,y=0)
@@ -248,7 +284,6 @@ class ProgramWindowClass:
         self.StatusLabel.configure(text='Trade Helper Bot')
         self.VersionLabel.place(x=450,y=580)
 
-        self.ProgressBar.grid_forget()
         self.UnderLabel2.grid_forget()
 
         self.ConsoleBg = Canvas(self.root,height=17,width=295,bg='gray9',highlightbackground='gray9')
@@ -291,6 +326,10 @@ class ProgramWindowClass:
         self.ListBox.configure(height=35,width=41,highlightbackground='gray9')
 
         #============================================MAIN BOT PROCESS================================================
+
+        if not isTweenInstalled:
+            self.add_message_to_list('No tween installed! Use "pip install tween" or "python3 -m pip install tween"',1)
+
         global item_count
         global message_count
         item_count = -1
