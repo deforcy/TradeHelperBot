@@ -6,12 +6,26 @@
       "sl1": "Close by SL",
       "sl2": "Deal was closed by SL (Stop Loss)",
       "er1": "Close earlier",
-      "er2": "Deal was closed earlier"
+      "er2": "Deal was closed earlier",
+
+      "setZoom": "Graph scale",
+      "zoomIn": "Scale graph in",
+      "zoomOut": "Scale graph out"
     },
     "labels": {
+      "pn": "Pair name",
       "ep": "EP (Entry Point)",
       "tp": "TP (Take Profit)",
-      "sl": "SL (Stop Loss)"
+      "sl": "SL (Stop Loss)",
+      "not_provided": "Not provided:"
+    },
+    "commands":{
+      "dc": "create_deal",
+      "dc_desc": "Create a deal with given parameters",
+      "pn_desc": "Upper pair name of desired crypto",
+      "ep_desc": "An entry price (or place) where deal should start (can be number or text)",
+      "tp_desc": "Take profit value (can be number or text)",
+      "sl_desc": "Stop loss value (can be number or text)"
     }
   },
   "it": {

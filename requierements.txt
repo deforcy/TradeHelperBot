@@ -1,4 +1,0 @@
-pip install discord.py
-pip install tk
-pip install pillow
-pip install tween
